@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #2a9d8f;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 20px;
+            border-radius: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .services-section {
+            padding: 60px 20px;
+            background-color: #264653;
+            color: white;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            color: #f4a261;
+            margin-bottom: 30px;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background-color: #2a9d8f;
+            padding: 20px;
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            color: #f4a261;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://avatars.githubusercontent.com/u/169113067?s=400&u=315442ebc949948bcb97e39f222cc1023b2d4b8e&v=4"
+                    alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Highlight.html">Highlight</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="LoginPage.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2>Our IT Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Building responsive, user-friendly websites tailored to your business needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Solutions</h3>
+                <p>Providing scalable cloud computing services to streamline your business processes.</p>
+            </div>
+            <div class="service-item">
+                <h3>Cybersecurity</h3>
+                <p>Securing your digital assets with top-notch cybersecurity solutions.</p>
+            </div>
+            <div class="service-item">
+                <h3>IT Consulting</h3>
+                <p>Expert IT advice to optimize your systems and drive business growth.</p>
+            </div>
+        </div>
+        <a href="#" class="cta-button">Go to Top</a>
+    </section>
+</body>
+
+</html>
