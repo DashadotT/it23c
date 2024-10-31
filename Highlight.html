@@ -18,7 +18,7 @@
             color: #333;
             background: linear-gradient(135deg, #2a9d8f, #264653);
             position: relative;
-            overflow: hidden;
+
         }
 
         header {
@@ -119,6 +119,62 @@
             margin-bottom: 30px;
         }
 
+        .projects-section {
+            background-color: #264653;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            color: #f4a261;
+            margin-bottom: 30px;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            padding: 20px;
+            width: 700px;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            background-color: #2a9d8f;
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            color: #f4a261;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+
         .shape {
             position: absolute;
             border-radius: 50%;
@@ -142,13 +198,17 @@
             right: 10%;
         }
 
+
+
         @keyframes float {
             0% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
+
             100% {
                 transform: translateY(0);
             }
@@ -179,6 +239,26 @@
         <h2>Welcome to My Portfolio</h2>
         <p>Check out my latest projects, work highlights, and achievements. Stay tuned for more updates as I continue to
             grow and expand my skill set!</p>
+    </section>
+
+    <section class="projects-section">
+        <h2>My IT projects</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Event Driven Programming</h3>
+                <p>Building responsive, user-friendly websites tailored to your business needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Fundamentals of Programming 2</h3>
+                <p>Providing scalable cloud computing services to streamline your business processes.</p>
+            </div>
+            <div class="service-item">
+                <h3>Multimedia</h3>
+                <p>Securing your digital assets with top-notch cybersecurity solutions.</p>
+            </div>
+
+        </div>
+        <a href="#" class="cta-button">Go to Top</a>
     </section>
 
     <div class="shape shape1"></div>
