@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #2a9d8f, #264653);
+            position: relative;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 20px;
+            border-radius: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .resume-section {
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .resume-section h2 {
+            font-size: 2.5rem;
+            color: #f4a261;
+            margin-bottom: 20px;
+        }
+
+        .resume-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .resume-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #f4a261;
+        }
+
+        .skills-section,
+        .experience-section,
+        .education-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .skills-section h3,
+        .experience-section h3,
+        .education-section h3 {
+            font-size: 2rem;
+            color: #f4a261;
+            margin-bottom: 20px;
+        }
+
+        .skills-list,
+        .experience-list,
+        .education-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background-color: #2a9d8f;
+            padding: 20px;
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .item h4 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #e9c46a;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 10%;
+            left: 10%;
+        }
+
+        .shape2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 50%;
+            right: 10%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #e9c46a;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://i.ibb.co/BqN86j7/mylogs.png" alt="Logo" border="0">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Highlight.html">Highlight</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="LogPage.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="resume-section">
+        <img src="./pictures/drive-download-20241107T122047Z-001/me.jpg" alt="Profile Picture">
+
+        <h2>Resume</h2>
+        <p>Hello, I'm Mark Jovan G. Octat, a passionate Web Developer, Programmer, and Graphic Artist with 10 years of
+            experience in Web Development, Database Management, and Multimedia. I specialize in Coding, and my mission
+            is to help businesses and individuals achieve their goals through innovative solutions and strategic
+            insights.</p>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h3><i class="fas fa-laptop-code icon"></i>Skills</h3>
+        <div class="skills-list">
+            <div class="item">
+                <h4><i class="fas fa-code icon"></i>Programming</h4>
+                <p>JavaScript, Python, C++, Ruby</p>
+            </div>
+            <div class="item">
+                <h4><i class="fas fa-paint-brush icon"></i>Design</h4>
+                <p>Adobe Photoshop, Sketch, Figma</p>
+            </div>
+            <div class="item">
+                <h4><i class="fas fa-laptop icon"></i>Web Development</h4>
+                <p>HTML, CSS, React, Node.js</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <h3><i class="fas fa-briefcase icon"></i>Experience</h3>
+        <div class="experience-list">
+            <div class="item">
+                <h4>Senior Developer</h4>
+                <p>Google | 2019-2024</p>
+                <p>Developed and maintained web applications, led a team of junior developers, and contributed to the
+                    overall product strategy.</p>
+            </div>
+            <div class="item">
+                <h4>Junior Developer</h4>
+                <p>Facebook | 2016-2019</p>
+                <p>Worked on frontend and backend development, collaborating with cross-functional teams to deliver
+                    high-quality features.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <h3><i class="fas fa-graduation-cap icon"></i>Education</h3>
+        <div class="education-list">
+            <div class="item">
+                <h4>Bachelor of Science in Information Technology</h4>
+                <p>Harvard University | 2014</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+</body>
+
+</html>

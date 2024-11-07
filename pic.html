@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #2a9d8f, #264653);
+            position: relative;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 20px;
+            border-radius: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .gallery-section {
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-section h2 {
+            font-size: 2.5rem;
+            color: #f4a261;
+            margin-bottom: 20px;
+        }
+
+        .gallery-section .text {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: 250px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            background-color: #2a9d8f;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #f4a261;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 10%;
+            left: 15%;
+        }
+
+        .shape2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 50%;
+            right: 10%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://i.ibb.co/BqN86j7/mylogs.png" alt="Logo" border="0">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Highlight.html">Highlight</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="LogPage.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="gallery-section">
+        <h2>Digital Art Gallery</h2>
+        <p class="text">These images were created and designed by me. Each image reflects my unique style and
+            perspective, showcasing my artistic skills and creativity.</p>
+
+        <div class="gallery-container" id="galleryContainer">
+        </div>
+
+        <div class="button-container">
+            <button class="nav-button" id="prevBtn">Previous</button>
+            <button class="nav-button" id="nextBtn">Next</button>
+        </div>
+    </section>
+
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+
+    <script>
+        const images = [
+            "./pictures/drive-download-20241107T122047Z-001/1.jpg",
+            "./pictures/drive-download-20241107T122047Z-001/2.jpg",
+            "./pictures/drive-download-20241107T122047Z-001/3.jpg",
+            "./pictures/drive-download-20241107T122047Z-001/4.jpg",
+            "./pictures/drive-download-20241107T122047Z-001/5.png",
+            "./pictures/drive-download-20241107T122047Z-001/6.jpg",
+            "./pictures/drive-download-20241107T122047Z-001/7.png",
+            "./pictures/drive-download-20241107T122047Z-001/8.png",
+            "./pictures/drive-download-20241107T122047Z-001/9.png",
+            "./pictures/drive-download-20241107T122047Z-001/10.png"
+        ];
+
+        let currentIndex = 0;
+
+        function renderGallery() {
+            const galleryContainer = document.getElementById('galleryContainer');
+            galleryContainer.innerHTML = "";
+
+            const imagesToShow = images.slice(currentIndex, currentIndex + 3);
+
+            imagesToShow.forEach(image => {
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+                galleryItem.innerHTML = `<img src="${image}" alt="Image">`;
+                galleryContainer.appendChild(galleryItem);
+            });
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentIndex + 3 < images.length) {
+                currentIndex += 3;
+            }
+            renderGallery();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentIndex - 3 >= 0) {
+                currentIndex -= 3;
+            }
+            renderGallery();
+        });
+
+        renderGallery();
+    </script>
+</body>
+
+</html>
